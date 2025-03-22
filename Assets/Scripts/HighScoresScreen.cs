@@ -9,7 +9,7 @@ public class HighScoresScreen : MonoBehaviour {
     void Start() {
         foreach (DataManager.HighScore hs in DataManager.Instance.highScores) {
             int index = DataManager.Instance.highScores.IndexOf(hs);
-            scores.text += $"{index}.- {hs.playerName}: {hs.score} pts.\n";
+            scores.text += $"{index+1}.- {hs.playerName}: {hs.score} pts.\n";
         }
     }
 }
